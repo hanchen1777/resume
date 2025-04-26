@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>楊涵真的求職自傳履歷</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: radial-gradient(ellipse at top left, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.ibb.co/2vkhhKt/particles.gif') center center / cover no-repeat;
+      opacity: 0.05;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    header {
+      text-align: center;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      padding: 2rem 1rem 1rem;
+      color: #ffffff;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(8px);
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .menu-item {
+      font-size: 0.85rem;
+      padding: 0.6rem 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      background: transparent;
+      color: #e0e0e0;
+    }
+
+    .menu-item:hover,
+    .menu-item.active {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s, opacity 0.5s;
+      opacity: 0;
+      transform: translateY(30px);
+      text-align: left;
+      margin: 0 auto;
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .card p,
+    .card ul {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card ul li::before {
+      content: "• ";
+      margin-right: 0.5rem;
+      color: #ccc;
+    }
+
+    a {
+      color: #a0c4ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .round-image {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .square-image {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 15px; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header { font-size: 2rem; }
+      .card h2 { font-size: 1.5rem; }
+      .card p, .card ul { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>楊涵真的個人簡介</header>
+
+  <nav class="navbar">
+    <div class="menu-item active" data-section="basic">個人檔案</div>
+    <div class="menu-item" data-section="holland">何倫碼測驗結果</div>
+    <div class="menu-item" data-section="work">關於MIS</div>
+    <div class="menu-item" data-section="resume">求職履歷</div>
+  </nav>
+
+  <main class="content">
+    <div class="card section show" id="basic">
+    <h2>基本資料</h2>
+    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+      <div style="flex: 1;">
+        <p><strong>姓名：</strong>楊涵真</p>
+        <p><strong>就讀：</strong>靜宜大學</p>
+        <p><strong>系級：</strong>資管二B</p>
+        <p><strong>學號：</strong>411214284</p>
+        <p><strong>信箱：</strong><a href="mailto:hy60712@gmail.com">hy60712@gmail.com</a></p>
+      </div>
+      <div style="flex-shrink: 0;">
+        <img src="me1.jpg" alt="基本資料圖片" class="round-image">
+      </div>
+    </div>
+    <br><br>
+    <h2>興趣與專長</h2>
+    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+      <div style="flex: 1;">
+        <p><strong>興趣：</strong>唱歌、拍照、出遊</p>
+        <p><strong>專長：</strong>文書處理、版面編輯</p>
+      </div>
+        <div style="flex-shrink: 0;">
+        <img src="me2.jpg" alt="興趣與專長圖片" class="round-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="card section" id="holland" style="display:none;">
+      <h2>104 興趣何倫碼</h2>
+      <p><strong>測驗結果：</strong>共6種，分別為R、I、A、S、E、C</p>
+      <ul>
+        <li>R：實用型 (Realistic)</li>
+        <li>I：研究型 (Investigative)</li>
+        <li>A：藝術型 (Artistic)</li>
+        <li>S：社會型 (Social)</li>
+        <li>E：企業型 (Enterprising)</li>
+        <li>C：事務型 (Conventional)</li>
+      </ul>
+      <p><a href="https://guide.104.com.tw/interest/" target="_blank">點擊此處測驗你的何倫碼</a></p>
+      <br><br>
+      <h2>我的Holland碼類型為 : A藝術 & S社會</h2>
+      <div class="image-container">
+        <img src="何倫碼.png" alt="Holland Code" class="square-image">
+      </div>
+      <br><br>
+      <h2>此類型最常從事的職業</h2>
+      <div class="image-container">
+        <img src="最常從事的職務.png" alt="常從事的職業" class="square-image">
+      </div>
+    </div>
+
+    <div class="card section" id="work" style="display:none;">
+    <h2>MIS（管理資訊系統）</h2>
+    <p>MIS（Management Information System）是結合「人」、「流程」、「技術」的系統，
+    <br>幫助組織收集、處理、儲存、分析與傳遞資訊，支援決策、協助業務運作、提高效率與競爭力。</p>
+    <br><br><br><br>
+    <div style="height: 2px; background: rgba(255,255,255,0.3); margin: 20px 0;"></div>
+    <h2>📚 MIS 涵蓋的範圍</h2>
+      <ul>
+        <li>ERP（企業資源規劃）系統 - 如 SAP、Oracle ERP</li>
+        <li>CRM（顧客關係管理）系統 - 如 Salesforce</li>
+        <li>HRM（人力資源管理）系統 - 如 Workday</li>
+        <li>SCM（供應鏈管理）系統 - 如 Kinaxis</li>
+        <li>財務資訊系統、製造管理系統、知識管理系統(KMS)</li>
+      </ul>
+    <br><br><br><br>
+    <div style="height: 2px; background: rgba(255,255,255,0.3); margin: 20px 0;"></div>
+    <h2>💼 常見 MIS 職位</h2>
+      <ul>
+        <li>MIS 工程師（MIS Engineer）</li>
+        <li>系統分析師（System Analyst）</li>
+        <li>資料庫管理師（Database Administrator, DBA）</li>
+        <li>企業資訊顧問（IT Consultant）</li>
+        <li>資訊專案經理（IT Project Manager）</li>
+      </ul>
+    <br><br><br><br>
+    <div style="height: 2px; background: rgba(255,255,255,0.3); margin: 20px 0;"></div>
+    <h2>🧠 MIS 必備技能</h2>
+      <ul>
+        <li>資料庫設計與管理（MySQL、SQL Server、Oracle）</li>
+        <li>程式開發能力（Python、Java、PHP）</li>
+        <li>系統分析與設計方法（UML、SDLC）</li>
+        <li>網路基礎知識（TCP/IP, VPN, 防火牆設定）</li>
+        <li>ERP/CRM 系統經驗</li>
+        <li>資安知識（防火牆、入侵偵測 IDS/IPS）</li>
+      </ul>
+    <br><br><br><br>
+    <div style="height: 2px; background: rgba(255,255,255,0.3); margin: 20px 0;"></div>
+    <h2>📈 MIS 對企業的重要性</h2>
+      <ul>
+        <li>提供高層快速、準確的資訊輔助決策</li>
+        <li>減少重複作業、提高效率</li>
+        <li>促進部門協作、加強管理</li>
+        <li>降低錯誤率與營運成本</li>
+        <li>推動數位轉型、自動化作業</li>
+      </ul>
+    <br><br><br><br>
+    <div style="height: 2px; background: rgba(255,255,255,0.3); margin: 20px 0;"></div>
+    <h2>🌍 MIS 未來趨勢</h2>
+      <ul>
+        <li>雲端化（AWS、Azure、GCP 等）</li>
+        <li>結合大數據分析與 AI（Decision Support Systems）</li>
+        <li>行動化（Mobile MIS，手機/平板管理）</li>
+        <li>資安防護升級（Cybersecurity）</li>
+        <li>智慧MIS系統（自動流程優化與建議）</li>
+      </ul>
+    </div>
+
+    <div class="card section" id="resume" style="display:none;">
+      <h2>求職履歷</h2>
+      <p>
+        根據我的何倫碼測驗結果，我屬於藝術型(A)與社會型(S)的組合。<br>
+        藝術型的人擅長創造、設計與表達，而社會型的人則喜歡與人互動、協助他人解決問題。<br>
+        網頁設計師這個職業結合了這兩種特質，一方面能透過網站設計發揮創意，另一方面還能幫助他人有效地呈現資訊與品牌形象。<br>
+        因此我非常希望朝網頁設計師的這個方向發展。
+      </p>
+      <br>
+      <h2>需要做的準備</h2>
+      <ul>
+        <li>精通 HTML、CSS、JavaScript 等前端技術</li>
+        <li>學習 RWD 響應式設計技巧</li>
+        <li>熟悉設計工具如 Figma、Photoshop、Illustrator</li>
+        <li>建立 UX / UI 設計思維</li>
+        <li>了解網頁結構與 SEO 基礎</li>
+        <li>建立自己的作品集網站並累積專案經驗</li>
+      </ul>
+      <br>
+      <h2>目前的不足與待加強之處</h2>
+      <ul>
+        <li>程式碼撰寫還不夠熟練，需更多實作練習</li>
+        <li>對色彩與排版的美感需要進一步培養</li>
+        <li>沒有建立完善的使用者經驗設計能力</li>
+        <li>缺乏實際專案經驗，未來會透過實習與接案補足</li>
+      </ul>
+      <br>
+      <p><strong>🌍總結：</strong>我相信透過結合藝術創意與助人熱情，網頁設計師會是適合我的職涯方向，未來我會努力去加強自己不足的地方，讓自己成為具備設計與技術能力的全方位人才。</p>
+    </div>
+  </main>
+
+  <footer>© 2025 楊涵真</footer>
+
+  <script>
+    const menuItems = document.querySelectorAll('.menu-item');
+    const sections = document.querySelectorAll('.section');
+
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        menuItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        sections.forEach(section => {
+          section.style.display = 'none';
+          section.classList.remove('show');
+        });
+        const sectionId = item.getAttribute('data-section');
+        const target = document.getElementById(sectionId);
+        target.style.display = 'block';
+        setTimeout(() => target.classList.add('show'), 50);
+      });
+    });
+  </script>
+
+</body>
+</html>
